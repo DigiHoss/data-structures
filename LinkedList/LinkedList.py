@@ -22,6 +22,10 @@ class LinkedList:
             print(current.data, end="->")
             current = current.next
         print("None")
+    def prepend(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
 
 
 def test():
@@ -30,6 +34,7 @@ def test():
     linked_list.append(20)
     linked_list.append(30)
     linked_list.append(40)
+    linked_list.prepend(5)
     linked_list.display()
 
 if __name__ == '__main__':
